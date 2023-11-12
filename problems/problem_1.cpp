@@ -1,14 +1,22 @@
 void problemSolution1(float consumed_water) {
     float cost;
     // write your code here
-    if (consumed_water<=30){
-        cost = 13.0 + (a*0.4);
-    }else if(consumed_water>30 && consumed_water<=50){
-        cost = 13.0 + 30*0.4+ (consumed_water-30)*0.12;
-    }else if(consumed_water>50 && consumed_water<=60){
-        cost = 13.0 + 30*0.4+ 20*0.4 +(consumed_water-50)*1.4;
-    }else if(consumed_water>60) {
-        cost = 13.0 + 30 * 0.4 + 20 * 0.4 + 10 * 1.4 + (consumed_water - 60) * 1.5;
+    if (water == 0)
+        return 0;
+    float cost = 13.0;
+    int array[3] = {30, 20, 10};
+    double cos[4] = {0.4, 0.12, 1.4, 1.5};
+    for (int count = 0; count < 3; count++) {
+        if (water <= array[count])
+            cost += water * cos[count];
+        else
+            cost += cos[count] * array[count];
+        water -= array[count];
+        if (water <= 0)
+            break;
     }
+    if (water > 0)
+        cost += cos[3] * water;
+}
     return cost;
 }
