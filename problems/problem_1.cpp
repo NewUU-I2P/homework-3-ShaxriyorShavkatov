@@ -17,6 +17,6 @@ void problemSolution1(float consumed_water) {
     }
     if (water > 0)
         cost += cos[3] * water;
-}
+
     return cost;
 }
