@@ -1,7 +1,8 @@
-void problemSolution1(float consumed_water) {
+float problemSolution1(float consumed_water) {
     float cost;
     // write your code here
-    if (water == 0)
+    /*
+        if (water == 0)
         return 0;
     float cost = 13.0;
     int array[3] = {30, 20, 10};
@@ -16,7 +17,7 @@ void problemSolution1(float consumed_water) {
             break;
     }
     if (water > 0)
-        cost += cos[3] * water;
+        cost += cos[3] * water; */
 
     return cost;
 }
